@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class IBuilding : MonoBehaviour
+{
+    private IBuild result; 
+    private TextMeshPro ui;
+    private IInventory inventory;
+    private bool update;
+
+    private void Start()
+    {
+        inventory = FindObjectOfType<IInventory>();
+        ui = GetComponentInChildren<TextMeshPro>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            ui.gameObject.SetActive(true);
+
+            foreach ()
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+            update = false;
+    }
+}
